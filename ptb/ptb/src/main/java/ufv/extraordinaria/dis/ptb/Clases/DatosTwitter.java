@@ -1,27 +1,37 @@
 package ufv.extraordinaria.dis.ptb.Clases;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import java.util.Date;
+
 public class DatosTwitter {
-    private String id;
+    private Integer id;
     private String tweet;
     private String usuario;
+
     private String fecha;
+
+  /*  @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="dd/MM/yyyy")
+    private Date fecha; //Fecha del informe */
 
     public DatosTwitter() { //Constructor vacío
     }
 
-    public DatosTwitter(String id, String tweet, String usuario, String fecha) {
+    public DatosTwitter(Integer id, String tweet, String usuario, String fecha) {
         this.id = id;
         this.tweet = tweet;
         this.usuario = usuario;
         this.fecha = fecha;
     }
-    public String getId() {
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
+
     public String getTweet() {
         return tweet;
     }
@@ -45,6 +55,5 @@ public class DatosTwitter {
     public void setFecha(String fecha) {
         this.fecha = fecha;
     }
-
 }
 

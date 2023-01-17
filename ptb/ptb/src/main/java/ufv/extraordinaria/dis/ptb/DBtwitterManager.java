@@ -7,9 +7,9 @@ import com.google.gson.stream.JsonReader;
 import java.io.*;
 
 public class DBtwitterManager {
-    private final String db_path = "twitter.json"; //Path del json guardado en resources
+    private final String db_path = "src/main/resources/twitter.json"; //Path del json guardado en resources
     private static final Gson gsonDate = new GsonBuilder()
-            .setDateFormat("yyyy/MM/dd HH:mm:ss").create(); // le paso el formato de la fecha, para que lo lea bien y saque los datos
+            .setDateFormat("yyyy/MM/dd").create(); // le paso el formato de la fecha, para que lo lea bien y saque los datos
 
     public DBtwitter readDB() { // clase para leer la base de datos, que viene dada por un json
         try { // abrimos el archivo
