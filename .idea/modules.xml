@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/PatriCeli.iml" filepath="$PROJECT_DIR$/.idea/PatriCeli.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ptb/ptb/ptb.iml" filepath="$PROJECT_DIR$/ptb/ptb/ptb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/skeleton-starter-flow-spring-14/skeleton-starter-flow-spring-14/spring-skeleton.iml" filepath="$PROJECT_DIR$/skeleton-starter-flow-spring-14/skeleton-starter-flow-spring-14/spring-skeleton.iml" />
+    </modules>
+  </component>
+</project>
