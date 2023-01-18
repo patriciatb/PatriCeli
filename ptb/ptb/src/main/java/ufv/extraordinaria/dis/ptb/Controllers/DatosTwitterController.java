@@ -7,9 +7,10 @@ import ufv.extraordinaria.dis.ptb.DBtwitterManager;
 
 import java.util.ArrayList;
 
+@RestController
 public class DatosTwitterController {
 
-    private final String path = "/twitter"; // ruta para acceder a los datos de las zonas básicas de salud
+    private final String path = "/zbs"; // ruta para acceder a los datos de las zonas básicas de salud
     private DBtwitter db = new DBtwitter(); //creo un objeto de la clase DBtwitter
 
     @GetMapping(path)

@@ -7,9 +7,9 @@ import com.google.gson.stream.JsonReader;
 import java.io.*;
 
 public class DBtwitterManager {
-    private final String db_path = "src/main/resources/twitter.json"; //Path del json guardado en resources
+    private final String db_path = "carpetajson/zbs.json"; //Path del json guardado en resources
     private static final Gson gsonDate = new GsonBuilder()
-            .setDateFormat("yyyy/MM/dd").create(); // le paso el formato de la fecha, para que lo lea bien y saque los datos
+            .setDateFormat("dd/MM/yyyy HH:mm:ss").create(); // le paso el formato de la fecha, para que lo lea bien y saque los datos
 
     public DBtwitter readDB() { // clase para leer la base de datos, que viene dada por un json
         try { // abrimos el archivo
@@ -25,7 +25,7 @@ public class DBtwitterManager {
 
     public void saveDB(DBtwitter db2save) { //clase para guardar la base de datos, ya que vamos a ir actualizando datos, poder guardarlos
         try (Writer writer = new FileWriter(db_path)) { // abrimos el archivo
-            Gson gson2 = new GsonBuilder().setDateFormat("yyyy/MM/dd HH:mm:ss").create(); // creamos un gson
+            Gson gson2 = new GsonBuilder().setDateFormat("dd/MM/yyyy HH:mm:ss").create(); // creamos un gson
             gson2.toJson(db2save, writer); // le pasamos la base de datos y el writer
         } catch (IOException e) {
             e.printStackTrace(); // si hay algun error de entrada/salida, imprime el error
